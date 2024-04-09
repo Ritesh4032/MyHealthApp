@@ -1,236 +1,173 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-class MyLogin extends StatelessWidget {
+class MyLogin extends StatefulWidget {
   const MyLogin({super.key});
 
   @override
+  State<MyLogin> createState() => _MyLoginState();
+}
+
+int _currentIndex = 0;
+final tabs = [
+  Center(child: Text('Search')),
+  Center(child: Text('Person')),
+];
+
+class _MyLoginState extends State<MyLogin> {
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: Icon(Icons.arrow_back)),
-      ),
-      body: Column(
-        children: [
-          Stack(
+    return Column(
+      children: [
+        Container(
+          padding: EdgeInsets.only(top: 20),
+          margin: EdgeInsets.all(4),
+          decoration: BoxDecoration(
+              color: Colors.grey, borderRadius: BorderRadius.circular(20)),
+          height: 138,
+          child: Column(
             children: [
-              Container(
-                  color: Colors.amber, height: 500, width: double.infinity),
-              Positioned(
-                  top: 5,
-                  left: 125,
-                  child: Column(
-                    children: [
-                      TextButton(
-                        onPressed: () {},
-                        child: Column(
-                          children: [
-                            Text(
-                              ' Calorie Budget',
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
-                            ),
-                            Text(' 1997',
-                                style: TextStyle(
-                                  color: Colors.blue,
-                                )),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 70,
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(50),
-                        child: Container(
-                          height: 100,
-                          width: 100,
-                          color: Colors.deepPurple,
-                        ),
-                      ),
-                    ],
-                  )),
-              Positioned(
-                top: 150,
-                width: 390,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    TextButton(
-                      onPressed: () {},
-                      child: Column(
-                        children: [
-                          Text(
-                            ' Excercise',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                          Text(' 0',
-                              style: TextStyle(
-                                color: Colors.blue,
-                              )),
-                        ],
-                      ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: Image.asset(
+                      'assets/images/analysis.png',
+                      height: 70,
                     ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Column(
-                        children: [
-                          Text(
-                            ' Breakfast',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                          Text(' 10',
-                              style: TextStyle(
-                                color: Colors.blue,
-                              )),
-                        ],
-                      ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'Please review food log and mark it as \n Complete in order to see weight forecast\n and diet tips ',
+                    style: TextStyle(
+                      fontSize: 15,
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 80),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    TextButton(
-                      onPressed: () {},
-                      child: Column(
-                        children: [
-                          Text(
-                            ' Excercise',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                          Text(' 10',
-                              style: TextStyle(
-                                color: Colors.blue,
-                              )),
-                        ],
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Column(
-                        children: [
-                          Text(
-                            ' Breakfast',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                          Text(' 0',
-                              style: TextStyle(
-                                color: Colors.blue,
-                              )),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Positioned(
-                top: 220,
-                width: 390,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    TextButton(
-                      onPressed: () {},
-                      child: Column(
-                        children: [
-                          Text(
-                            ' Excercise',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                          Text(' 0',
-                              style: TextStyle(
-                                color: Colors.blue,
-                              )),
-                        ],
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Column(
-                        children: [
-                          Text(
-                            ' Breakfast',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                          Text(' 10',
-                              style: TextStyle(
-                                color: Colors.blue,
-                              )),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Positioned(
-                top: 270,
-                width: 390,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    TextButton(
-                      onPressed: () {},
-                      child: Column(
-                        children: [
-                          Text(
-                            ' Excercise',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                          Text(' 0',
-                              style: TextStyle(
-                                color: Colors.blue,
-                              )),
-                        ],
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Column(
-                        children: [
-                          Text(
-                            ' Breakfast',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                          Text(' 10',
-                              style: TextStyle(
-                                color: Colors.blue,
-                              )),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+                padding: const EdgeInsets.only(left: 250),
+                child:
+                    TextButton(onPressed: () {}, child: Text('Daily Analysis')),
+              )
             ],
-          )
-        ],
-      ),
+          ),
+        ),
+        Container(
+          padding: EdgeInsets.only(top: 15),
+          margin: EdgeInsets.all(6),
+          decoration: BoxDecoration(
+              color: Colors.grey, borderRadius: BorderRadius.circular(20)),
+          height: 140,
+          child: Column(
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    'assets/images/weights.png',
+                    height: 70,
+                  ),
+                  Text(
+                    'Current Weight: 74kg by 9 Apr. \n Maintained weight in 2 days since \n 7 Apr. ',
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 150),
+                    child: TextButton(
+                        onPressed: () {}, child: Text('Weight Details')),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: TextButton(onPressed: () {}, child: Text('Chart')),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+        Container(
+          padding: EdgeInsets.only(top: 20),
+          margin: EdgeInsets.all(12),
+          decoration: BoxDecoration(
+              color: Colors.grey, borderRadius: BorderRadius.circular(20)),
+          height: 200,
+          child: Column(
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 10,
+                    ),
+                    child: Container(
+                      child: Image.asset(
+                        'assets/images/dart.png',
+                        height: 50,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20, top: 10),
+                    child: Container(
+                        child: Text('Weight Plan : Lose 9 kgs in 124 days')),
+                  )
+                ],
+              ),
+              GestureDetector(
+                onTap: () {
+                  print('Image is clicked');
+                },
+                child: Image.asset(
+                  'assets/images/loss.jpg',
+                  height: 130,
+                ),
+              )
+            ],
+          ),
+        ),
+        BottomNavigationBar(
+          currentIndex: _currentIndex,
+          type: BottomNavigationBarType.shifting,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.dashboard),
+              label: 'DashBoard',
+              backgroundColor: Colors.blue,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.cabin),
+              label: 'Coach',
+              backgroundColor: Colors.red,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.social_distance),
+              label: 'Society',
+              backgroundColor: Colors.blue,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Me',
+              backgroundColor: Colors.red,
+            ),
+          ],
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+        )
+      ],
     );
   }
 }
