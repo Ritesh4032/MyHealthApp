@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:my_net_diary/bottom_Navigation_Bar.dart';
+
 import 'package:my_net_diary/login.dart';
 
 class MyInterface extends StatelessWidget {

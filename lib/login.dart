@@ -8,12 +8,6 @@ class MyLogin extends StatefulWidget {
   State<MyLogin> createState() => _MyLoginState();
 }
 
-int _currentIndex = 0;
-final tabs = [
-  Center(child: Text('Search')),
-  Center(child: Text('Person')),
-];
-
 class _MyLoginState extends State<MyLogin> {
   @override
   Widget build(BuildContext context) {
@@ -136,37 +130,6 @@ class _MyLoginState extends State<MyLogin> {
             ],
           ),
         ),
-        BottomNavigationBar(
-          currentIndex: _currentIndex,
-          type: BottomNavigationBarType.shifting,
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.dashboard),
-              label: 'DashBoard',
-              backgroundColor: Colors.blue,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.cabin),
-              label: 'Coach',
-              backgroundColor: Colors.red,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.social_distance),
-              label: 'Society',
-              backgroundColor: Colors.blue,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'Me',
-              backgroundColor: Colors.red,
-            ),
-          ],
-          onTap: (index) {
-            setState(() {
-              _currentIndex = index;
-            });
-          },
-        )
       ],
     );
   }
