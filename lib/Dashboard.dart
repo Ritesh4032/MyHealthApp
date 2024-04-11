@@ -3,7 +3,7 @@ import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:my_net_diary/bottomnavigation/coach.dart';
 import 'package:my_net_diary/bottomnavigation/community.dart';
 import 'package:my_net_diary/bottomnavigation/me.dart';
-import 'package:my_net_diary/drawer/my_drawer_header.dart';
+import 'package:my_net_diary/drawer/drawertab.dart';
 import 'package:my_net_diary/interface.dart';
 
 class BottomNavbar extends StatefulWidget {
@@ -12,31 +12,6 @@ class BottomNavbar extends StatefulWidget {
 }
 
 class _BottomNavbarState extends State<BottomNavbar> {
-  final List<Map> data = [
-    {'title': Text('Diet Dashboard'), 'icon': Icon(Icons.dashboard_customize)},
-    {'title': Text('Meals'), 'icon': Icon(Icons.set_meal_sharp)},
-    {'title': Text('Exercise'), 'icon': Icon(Icons.sports)},
-    {'title': Text('Weight'), 'icon': Icon(Icons.line_weight)},
-    {'title': Text('Premium Diets'), 'icon': Icon(Icons.dashboard_customize)},
-    {'title': Text('My Plans'), 'icon': Icon(Icons.set_meal_sharp)},
-    {'title': Text('Analysis'), 'icon': Icon(Icons.sports)},
-    {'title': Text('Weight'), 'icon': Icon(Icons.line_weight)},
-    {'title': Text('My Diet Trends'), 'icon': Icon(Icons.density_large)},
-    {'title': Text('My Advice'), 'icon': Icon(Icons.add_to_drive_outlined)},
-    {'title': Text('My Foods'), 'icon': Icon(Icons.food_bank_sharp)},
-    {'title': Text('Premium Recipes'), 'icon': Icon(Icons.receipt_outlined)},
-    {'title': Text('Premium Menus'), 'icon': Icon(Icons.menu_open_rounded)},
-    {'title': Text('Intermittent Fasting'), 'icon': Icon(Icons.set_meal_sharp)},
-    {
-      'title': Text('Rcipe Import'),
-      'icon': Icon(Icons.record_voice_over_rounded)
-    },
-    {'title': Text('Recipie Database'), 'icon': Icon(Icons.dangerous_sharp)},
-    {'title': Text('Water'), 'icon': Icon(Icons.water)},
-    {'title': Text('My Health'), 'icon': Icon(Icons.health_and_safety)},
-    {'title': Text('Daily Notes'), 'icon': Icon(Icons.notes)},
-    {'title': Text('Shopping List'), 'icon': Icon(Icons.shopping_cart)},
-  ];
   int _selectedIndex = 0;
 
   // List of pages for each item in the bottom navigation bar
@@ -61,29 +36,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(221, 73, 68, 68),
       ),
-      drawer: Drawer(
-        child: Column(
-          children: [
-            MyDrawer(),
-            Expanded(
-              child: ListView.builder(
-                itemCount: data.length,
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    leading: data[index]['icon'], // Icon
-                    title: data[index]['title'], // Text
-                    onTap: () {
-                      // Add onTap functionality here if needed
-                      print('Tapped item $index');
-                    },
-                  );
-                },
-              ),
-            ),
-          ],
-        ),
-      ),
-
+      drawer: DrawerTab(),
       body: _pages[_selectedIndex], // Display the selected page
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
