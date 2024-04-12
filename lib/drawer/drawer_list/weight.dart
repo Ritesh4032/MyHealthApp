@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_net_diary/drawer/drawertab.dart';
 
 class MyWeight extends StatefulWidget {
   const MyWeight({Key? key}) : super(key: key);
@@ -11,8 +12,10 @@ class _MyWeightState extends State<MyWeight> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
-      appBar: AppBar(),
+      drawer: DrawerTab(),
+      appBar: AppBar(
+        title: Text("Weight"),
+      ),
       body: SingleChildScrollView(
         child: Container(
           color: Colors.black,
@@ -321,7 +324,102 @@ class _MyWeightState extends State<MyWeight> {
                       ),
                     )
                   ],
-                )
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 305),
+                  child: TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Details',
+                        style: TextStyle(color: Colors.blue),
+                      )),
+                ),
+                Divider(),
+                Text(
+                  'Progress Photos',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  'The photo Gallery can help you visusalize your progress as you move tpowards your goal',
+                  maxLines: 2,
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 100),
+                  child: ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(Colors.blue),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        'Take your photo',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      )),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 270),
+                  child: TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'View photos',
+                        style: TextStyle(color: Colors.blue),
+                      )),
+                ),
+                Divider(),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        'assets/images/apple.png',
+                        height: 60,
+                      ),
+                      SizedBox(
+                        width: 30,
+                      ),
+                      Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(right: 270),
+                            child: Text(
+                              'Go Premium,Get Results',
+                              style: TextStyle(
+                                color: Colors.green,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 140),
+                            child: Text(
+                              'MyNetDiary Premium Members report losing \n 3 times the weight of free users!',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 265),
+                  child: TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Get Premium',
+                        style: TextStyle(color: Colors.blue),
+                      )),
+                ),
               ],
             ),
           ),

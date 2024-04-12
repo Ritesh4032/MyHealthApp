@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:my_net_diary/Dashboard.dart';
 import 'package:my_net_diary/drawer/drawer_list/Excersise.dart';
 import 'package:my_net_diary/drawer/drawer_list/Meals.dart';
+import 'package:my_net_diary/drawer/drawer_list/MyAdvice.dart';
+import 'package:my_net_diary/drawer/drawer_list/MyDietTrends.dart';
 import 'package:my_net_diary/drawer/drawer_list/PremiumDiets.dart';
+import 'package:my_net_diary/drawer/drawer_list/PremiumRecipes.dart';
 import 'package:my_net_diary/drawer/drawer_list/analysis.dart';
 import 'package:my_net_diary/drawer/drawer_list/weight.dart';
 import 'package:my_net_diary/drawer/my_drawer_header.dart';
@@ -19,7 +22,6 @@ class DrawerTab extends StatelessWidget {
     {'title': Text('Premium Diets'), 'icon': Icon(Icons.dashboard_customize)},
     {'title': Text('My Plans'), 'icon': Icon(Icons.set_meal_sharp)},
     {'title': Text('Analysis'), 'icon': Icon(Icons.sports)},
-    {'title': Text('Weight'), 'icon': Icon(Icons.line_weight)},
     {'title': Text('My Diet Trends'), 'icon': Icon(Icons.density_large)},
     {'title': Text('My Advice'), 'icon': Icon(Icons.add_to_drive_outlined)},
     {'title': Text('My Foods'), 'icon': Icon(Icons.food_bank_sharp)},
@@ -89,6 +91,30 @@ class DrawerTab extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => MyAnalysis()));
+                        break;
+                      case 7:
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MyDietTrends()));
+                        break;
+                      case 8:
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MyAdvice()));
+                        break;
+                      case 9:
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MyAdvice()));
+                        break;
+                      case 10:
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MyPremiumRecipes()));
                         break;
                     }
                   },

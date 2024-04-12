@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:my_net_diary/drawer/drawertab.dart';
 
 class MyMeals extends StatefulWidget {
@@ -269,6 +270,34 @@ class _MyMealsState extends State<MyMeals> {
             )
           ],
         ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      floatingActionButton: SpeedDial(
+        animatedIcon: AnimatedIcons.event_add,
+        children: [
+          SpeedDialChild(
+              child: Icon(Icons.lunch_dining),
+              onTap: () {},
+              backgroundColor: Colors.red,
+              label: 'Lunch'),
+          SpeedDialChild(
+              child: Icon(Icons.breakfast_dining),
+              onTap: () {},
+              backgroundColor: Colors.blue,
+              label: 'Breakfast'),
+          SpeedDialChild(
+              child: Icon(Icons.nightlife),
+              onTap: () {},
+              backgroundColor: Colors.pink,
+              label: 'Dinner'),
+          SpeedDialChild(
+              child: Icon(Icons.water),
+              onTap: () {},
+              backgroundColor: Colors.amberAccent,
+              label: 'Water'),
+        ],
+        backgroundColor: Colors.blue,
+        child: const Icon(Icons.add),
       ),
     );
   }
