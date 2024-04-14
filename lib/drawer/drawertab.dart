@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:my_net_diary/Dashboard.dart';
 import 'package:my_net_diary/drawer/drawer_list/Excersise.dart';
+import 'package:my_net_diary/drawer/drawer_list/IntermittentFasting.dart';
 import 'package:my_net_diary/drawer/drawer_list/Meals.dart';
 import 'package:my_net_diary/drawer/drawer_list/MyAdvice.dart';
 import 'package:my_net_diary/drawer/drawer_list/MyDietTrends.dart';
 import 'package:my_net_diary/drawer/drawer_list/PremiumDiets.dart';
+import 'package:my_net_diary/drawer/drawer_list/PremiumMenus.dart';
 import 'package:my_net_diary/drawer/drawer_list/PremiumRecipes.dart';
+import 'package:my_net_diary/drawer/drawer_list/RecipeDatabase.dart';
+import 'package:my_net_diary/drawer/drawer_list/RecipeImport.dart';
 import 'package:my_net_diary/drawer/drawer_list/analysis.dart';
 import 'package:my_net_diary/drawer/drawer_list/weight.dart';
 import 'package:my_net_diary/drawer/my_drawer_header.dart';
@@ -29,10 +33,10 @@ class DrawerTab extends StatelessWidget {
     {'title': Text('Premium Menus'), 'icon': Icon(Icons.menu_open_rounded)},
     {'title': Text('Intermittent Fasting'), 'icon': Icon(Icons.set_meal_sharp)},
     {
-      'title': Text('Rcipe Import'),
+      'title': Text('Recipe Import'),
       'icon': Icon(Icons.record_voice_over_rounded)
     },
-    {'title': Text('Recipie Database'), 'icon': Icon(Icons.dangerous_sharp)},
+    {'title': Text('Recipe Database'), 'icon': Icon(Icons.dangerous_sharp)},
     {'title': Text('Water'), 'icon': Icon(Icons.water)},
     {'title': Text('My Health'), 'icon': Icon(Icons.health_and_safety)},
     {'title': Text('Daily Notes'), 'icon': Icon(Icons.notes)},
@@ -115,6 +119,30 @@ class DrawerTab extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => MyPremiumRecipes()));
+                        break;
+                      case 11:
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MyPremiumMenus()));
+                        break;
+                      case 12:
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MYIntermittent()));
+                        break;
+                      case 13:
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MyRecipe()));
+                        break;
+                      case 14:
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => RecipeDatabase()));
                         break;
                     }
                   },
