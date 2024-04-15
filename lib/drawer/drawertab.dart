@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:my_net_diary/Dashboard.dart';
+import 'package:my_net_diary/drawer/drawer_list/DailyNotes.dart';
 import 'package:my_net_diary/drawer/drawer_list/Excersise.dart';
 import 'package:my_net_diary/drawer/drawer_list/IntermittentFasting.dart';
 import 'package:my_net_diary/drawer/drawer_list/Meals.dart';
 import 'package:my_net_diary/drawer/drawer_list/MyAdvice.dart';
 import 'package:my_net_diary/drawer/drawer_list/MyDietTrends.dart';
+import 'package:my_net_diary/drawer/drawer_list/MyHealth.dart';
 import 'package:my_net_diary/drawer/drawer_list/PremiumDiets.dart';
 import 'package:my_net_diary/drawer/drawer_list/PremiumMenus.dart';
 import 'package:my_net_diary/drawer/drawer_list/PremiumRecipes.dart';
 import 'package:my_net_diary/drawer/drawer_list/RecipeDatabase.dart';
 import 'package:my_net_diary/drawer/drawer_list/RecipeImport.dart';
 import 'package:my_net_diary/drawer/drawer_list/analysis.dart';
+import 'package:my_net_diary/drawer/drawer_list/water.dart';
 import 'package:my_net_diary/drawer/drawer_list/weight.dart';
 import 'package:my_net_diary/drawer/my_drawer_header.dart';
 
@@ -143,6 +146,20 @@ class DrawerTab extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => RecipeDatabase()));
+                        break;
+                      case 15:
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => MyWater()));
+                        break;
+                      case 16:
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MyHealth()));
+                        break;
+                      case 17:
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => MyNotes()));
                         break;
                     }
                   },
