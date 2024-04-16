@@ -1,8 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:my_net_diary/Dashboard/Beakfast.dart';
 
-import 'package:my_net_diary/login.dart';
+import 'package:my_net_diary/Dashboard/login.dart';
+import 'package:my_net_diary/Dashboard/steps.dart';
+import 'package:my_net_diary/drawer/drawer_list/DailyNotes.dart';
+import 'package:my_net_diary/drawer/drawer_list/Excersise.dart';
+import 'package:my_net_diary/drawer/drawer_list/water.dart';
 
 class MyInterface extends StatelessWidget {
   const MyInterface({super.key});
@@ -10,21 +15,21 @@ class MyInterface extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
               margin: EdgeInsets.all(12),
               decoration: BoxDecoration(
-                  color: Colors.grey, borderRadius: BorderRadius.circular(20)),
+                  color: Colors.blue, borderRadius: BorderRadius.circular(20)),
               child: Stack(
                 children: [
                   Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                       ),
-                      height: 500,
+                      height: 480,
                       width: double.infinity),
                   Positioned(
                       top: 5,
@@ -43,7 +48,8 @@ class MyInterface extends StatelessWidget {
                                 ),
                                 Text(' 1997',
                                     style: TextStyle(
-                                      color: Colors.blue,
+                                      color: Colors.greenAccent,
+                                      fontSize: 20,
                                     )),
                               ],
                             ),
@@ -69,14 +75,14 @@ class MyInterface extends StatelessWidget {
                                       'Left',
                                       style: TextStyle(
                                         fontSize: 15,
-                                        color: Colors.white,
+                                        color: Colors.black,
                                       ),
                                     ),
                                     Text(
                                       '1,997',
                                       style: TextStyle(
                                         fontSize: 30,
-                                        color: Colors.white,
+                                        color: Colors.black,
                                       ),
                                     ),
                                   ],
@@ -84,7 +90,7 @@ class MyInterface extends StatelessWidget {
                               ),
                               height: 150,
                               width: 150,
-                              color: Color.fromARGB(255, 33, 32, 35),
+                              color: Colors.white,
                             ),
                           ),
                         ],
@@ -96,7 +102,12 @@ class MyInterface extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MyExcercise()));
+                          },
                           child: Column(
                             children: [
                               Text(
@@ -107,13 +118,18 @@ class MyInterface extends StatelessWidget {
                               ),
                               Text(' 0',
                                   style: TextStyle(
-                                    color: Colors.blue,
+                                    color: Colors.white,
                                   )),
                             ],
                           ),
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MyBreakfast()));
+                          },
                           child: Column(
                             children: [
                               Text(
@@ -124,7 +140,7 @@ class MyInterface extends StatelessWidget {
                               ),
                               Text(' 0',
                                   style: TextStyle(
-                                    color: Colors.blue,
+                                    color: Colors.white,
                                   )),
                             ],
                           ),
@@ -138,7 +154,12 @@ class MyInterface extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MySteps()));
+                          },
                           child: Column(
                             children: [
                               Text(
@@ -149,7 +170,7 @@ class MyInterface extends StatelessWidget {
                               ),
                               Text(' 0',
                                   style: TextStyle(
-                                    color: Colors.blue,
+                                    color: Colors.white,
                                   )),
                             ],
                           ),
@@ -166,7 +187,7 @@ class MyInterface extends StatelessWidget {
                               ),
                               Text(' 0',
                                   style: TextStyle(
-                                    color: Colors.blue,
+                                    color: Colors.white,
                                   )),
                             ],
                           ),
@@ -181,7 +202,12 @@ class MyInterface extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MyWater()));
+                          },
                           child: Column(
                             children: [
                               Text(
@@ -192,7 +218,7 @@ class MyInterface extends StatelessWidget {
                               ),
                               Text(' 0',
                                   style: TextStyle(
-                                    color: Colors.blue,
+                                    color: Colors.white,
                                   )),
                             ],
                           ),
@@ -209,7 +235,7 @@ class MyInterface extends StatelessWidget {
                               ),
                               Text('  0',
                                   style: TextStyle(
-                                    color: Colors.blue,
+                                    color: Colors.white,
                                   )),
                             ],
                           ),
@@ -224,7 +250,12 @@ class MyInterface extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MyNotes()));
+                          },
                           child: Column(
                             children: [
                               Text(
@@ -235,7 +266,7 @@ class MyInterface extends StatelessWidget {
                               ),
                               Text(' 0',
                                   style: TextStyle(
-                                    color: Colors.blue,
+                                    color: Colors.white,
                                   )),
                             ],
                           ),
@@ -252,7 +283,7 @@ class MyInterface extends StatelessWidget {
                               ),
                               Text('  0',
                                   style: TextStyle(
-                                    color: Colors.blue,
+                                    color: Colors.white,
                                   )),
                             ],
                           ),
@@ -289,7 +320,7 @@ class MyInterface extends StatelessWidget {
                         ),
                         Divider(
                           thickness: 10,
-                          color: Color.fromARGB(221, 53, 5, 134),
+                          color: Colors.brown,
                           indent: 10,
                           endIndent: 80,
                         ),
@@ -344,7 +375,7 @@ class MyInterface extends StatelessWidget {
                         ),
                         Divider(
                           thickness: 10,
-                          color: Color.fromARGB(221, 53, 5, 134),
+                          color: Colors.brown,
                           indent: 10,
                           endIndent: 80,
                         ),
@@ -399,7 +430,7 @@ class MyInterface extends StatelessWidget {
                         ),
                         Divider(
                           thickness: 10,
-                          color: Color.fromARGB(221, 53, 5, 134),
+                          color: Colors.brown,
                           indent: 10,
                           endIndent: 80,
                         ),

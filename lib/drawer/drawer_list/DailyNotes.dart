@@ -19,22 +19,18 @@ class _MyNotesState extends State<MyNotes> {
       body: Column(
         children: [
           Padding(
-            padding: EdgeInsets.all(20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
             child: TextField(
-              minLines: 5, // Set minimum number of lines
-              maxLines: null, // Allow unlimited lines
-              style: TextStyle(fontSize: 14.0),
-              textAlignVertical: TextAlignVertical.top, // Set font size here
+              maxLines: 15,
+              textAlign: TextAlign.justify,
               decoration: InputDecoration(
-                labelText: 'Enter your note',
-                border: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    width: 2.0, // Adjust the border width here
-                  ),
-                ),
-                contentPadding: EdgeInsets.symmetric(
-                    vertical: 150.0), // Adjust the vertical padding here
-              ),
+                  border: OutlineInputBorder(borderSide: BorderSide(width: 2)),
+                  contentPadding:
+                      EdgeInsets.only(bottom: 50, left: 8, right: 8),
+                  floatingLabelBehavior: FloatingLabelBehavior.always,
+                  focusedBorder:
+                      OutlineInputBorder(borderSide: BorderSide(width: 2)),
+                  labelText: 'Write Notes'),
             ),
           ),
         ],

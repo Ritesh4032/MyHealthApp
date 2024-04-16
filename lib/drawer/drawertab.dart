@@ -12,6 +12,7 @@ import 'package:my_net_diary/drawer/drawer_list/PremiumMenus.dart';
 import 'package:my_net_diary/drawer/drawer_list/PremiumRecipes.dart';
 import 'package:my_net_diary/drawer/drawer_list/RecipeDatabase.dart';
 import 'package:my_net_diary/drawer/drawer_list/RecipeImport.dart';
+import 'package:my_net_diary/drawer/drawer_list/ShoppingList.dart';
 import 'package:my_net_diary/drawer/drawer_list/analysis.dart';
 import 'package:my_net_diary/drawer/drawer_list/water.dart';
 import 'package:my_net_diary/drawer/drawer_list/weight.dart';
@@ -160,6 +161,12 @@ class DrawerTab extends StatelessWidget {
                       case 17:
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => MyNotes()));
+                        break;
+                      case 18:
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MyShoppingList()));
                         break;
                     }
                   },

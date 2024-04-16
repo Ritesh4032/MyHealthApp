@@ -4,7 +4,7 @@ import 'package:my_net_diary/bottomnavigation/coach.dart';
 import 'package:my_net_diary/bottomnavigation/community.dart';
 import 'package:my_net_diary/bottomnavigation/me.dart';
 import 'package:my_net_diary/drawer/drawertab.dart';
-import 'package:my_net_diary/interface.dart';
+import 'package:my_net_diary/Dashboard/interface.dart';
 
 class BottomNavbar extends StatefulWidget {
   @override
@@ -34,7 +34,10 @@ class _BottomNavbarState extends State<BottomNavbar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(221, 73, 68, 68),
+        backgroundColor: Colors.lightBlueAccent,
+        title: Text(
+          'My Health APP',
+        ),
       ),
       drawer: DrawerTab(),
       body: _pages[_selectedIndex], // Display the selected page
@@ -42,19 +45,31 @@ class _BottomNavbarState extends State<BottomNavbar> {
         type: BottomNavigationBarType.fixed,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home,
+              color: Colors.lightBlueAccent,
+            ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.sports),
+            icon: Icon(
+              Icons.sports,
+              color: Colors.lightBlueAccent,
+            ),
             label: 'Coach',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.group),
+            icon: Icon(
+              Icons.group,
+              color: Colors.lightBlueAccent,
+            ),
             label: 'Communities',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(
+              Icons.person,
+              color: Colors.lightBlueAccent,
+            ),
             label: 'ME',
           ),
         ],
@@ -87,7 +102,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
               backgroundColor: Colors.amberAccent,
               label: 'Water'),
         ],
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.green,
         child: const Icon(Icons.add),
       ),
     );

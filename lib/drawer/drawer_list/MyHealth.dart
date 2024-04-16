@@ -83,45 +83,6 @@ class _MyHealthState extends State<MyHealth> {
                     ),
                   ),
                 ),
-
-                // GestureDetector(
-
-                //   onTap: () {
-                //     Navigator.push(context,
-                //         MaterialPageRoute(builder: (context) => MyHealth()));
-                //   },
-                //   child: RichText(
-                //     text: TextSpan(
-                //       style: TextStyle(
-                //         color: Colors.white,
-                //         fontSize: 20.0,
-                //       ),
-                //       children: [
-                //         TextSpan(
-                //           text: 'You can explore',
-                //         ),
-                //         TextSpan(
-                //           text: 'Health ',
-                //           style: TextStyle(
-                //             fontWeight: FontWeight.bold,
-                //             fontStyle: FontStyle.italic,
-                //             color: Colors.blue,
-                //           ),
-                //         ),
-                //         TextSpan(
-                //           text:
-                //               'and choose\nwhat to track along with your diet',
-                //         ),
-                //       ],
-                //     ),
-                //   ),
-                // ),
-                // TextButton(
-                //     onPressed: () {},
-                //     child: Text(
-                //       'You can explore Health and choose\nwhat to track along with your diet',
-                //       style: TextStyle(color: Colors.white),
-                //     )),
               ],
             ),
             SizedBox(

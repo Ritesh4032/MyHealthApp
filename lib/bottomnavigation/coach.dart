@@ -20,7 +20,7 @@ class _MYcoachState extends State<MYcoach> {
             height: 70,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Colors.amberAccent,
+              color: Colors.blue,
             ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,7 +54,7 @@ class _MYcoachState extends State<MYcoach> {
             height: 140,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Colors.amberAccent,
+              color: Colors.blue,
             ),
             child: Column(
               children: [
@@ -84,8 +84,13 @@ class _MYcoachState extends State<MYcoach> {
                         ))
                   ],
                 ),
+                Divider(
+                  indent: 10,
+                  endIndent: 10,
+                  color: Colors.brown,
+                ),
                 SizedBox(
-                  height: 20,
+                  height: 8,
                 ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -122,7 +127,7 @@ class _MYcoachState extends State<MYcoach> {
             height: 70,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Colors.amberAccent,
+              color: Colors.blue,
             ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -162,15 +167,19 @@ class _MYcoachState extends State<MYcoach> {
                   fit: BoxFit.cover,
                 ),
                 Positioned(
-                  top: 80,
-                  child: Text(
-                    'LEARN MORE >',
-                    style: TextStyle(
-                        color: Colors.blue,
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold),
-                  ),
-                )
+                  top: 90,
+                  left: 260,
+                  child: ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.green),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        'Learn More',
+                        style: TextStyle(color: Colors.white),
+                      )),
+                ),
               ],
             ),
           ),
@@ -179,7 +188,7 @@ class _MYcoachState extends State<MYcoach> {
             height: 400,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Colors.amberAccent,
+              color: Colors.blue,
             ),
             child: Column(
               children: [
@@ -365,7 +374,7 @@ class _MYcoachState extends State<MYcoach> {
             height: 140,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Colors.amberAccent,
+              color: Colors.blue,
             ),
             child: Column(
               children: [
