@@ -176,7 +176,12 @@ class MyInterface extends StatelessWidget {
                           ),
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MyBreakfast()));
+                          },
                           child: Column(
                             children: [
                               Text(
@@ -224,7 +229,12 @@ class MyInterface extends StatelessWidget {
                           ),
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MyBreakfast()));
+                          },
                           child: Column(
                             children: [
                               Text(
@@ -272,7 +282,12 @@ class MyInterface extends StatelessWidget {
                           ),
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MyBreakfast()));
+                          },
                           child: Column(
                             children: [
                               Text(
@@ -299,11 +314,51 @@ class MyInterface extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            showDialog(
+                              context: context,
+                              builder: (context) => AlertDialog(
+                                backgroundColor: Colors.blue,
+                                title: Text('Available in Premium'),
+                                content: Text(
+                                    'In depth analysis of Total Carbohydrates is available in Premium.This version provides on depth analysis of calories and salt'),
+                                actions: <Widget>[
+                                  Column(
+                                    children: [
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text('View Calorie Analysis'),
+                                      ),
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text('View Salt Analysis'),
+                                      ),
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text('     More Info'),
+                                      ),
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text('      Cancel'),
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                            );
+                          },
                           child: Row(
                             children: [
                               Text(
-                                ' carbs',
+                                ' Fat',
                                 style: TextStyle(
                                   color: Colors.white,
                                 ),
@@ -311,10 +366,12 @@ class MyInterface extends StatelessWidget {
                               SizedBox(
                                 width: 30,
                               ),
-                              Text(' 0% cals',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                  )),
+                              Text(
+                                ' 0% cals',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -354,7 +411,47 @@ class MyInterface extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            showDialog(
+                              context: context,
+                              builder: (context) => AlertDialog(
+                                backgroundColor: Colors.blue,
+                                title: Text('Available in Premium'),
+                                content: Text(
+                                    'In depth analysis of Total Carbohydrates is available in Premium.This version provides on depth analysis of calories and salt'),
+                                actions: <Widget>[
+                                  Column(
+                                    children: [
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text('View Calorie Analysis'),
+                                      ),
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text('View Salt Analysis'),
+                                      ),
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text('     More Info'),
+                                      ),
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text('      Cancel'),
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                            );
+                          },
                           child: Row(
                             children: [
                               Text(
@@ -409,11 +506,51 @@ class MyInterface extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            showDialog(
+                              context: context,
+                              builder: (context) => AlertDialog(
+                                backgroundColor: Colors.blue,
+                                title: Text('Available in Premium'),
+                                content: Text(
+                                    'In depth analysis of Total Carbohydrates is available in Premium.This version provides on depth analysis of calories and salt'),
+                                actions: <Widget>[
+                                  Column(
+                                    children: [
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text('View Calorie Analysis'),
+                                      ),
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text('View Salt Analysis'),
+                                      ),
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text('     More Info'),
+                                      ),
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text('      Cancel'),
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                            );
+                          },
                           child: Row(
                             children: [
                               Text(
-                                ' carbs',
+                                ' Carbs',
                                 style: TextStyle(
                                   color: Colors.white,
                                 ),

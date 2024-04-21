@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:my_net_diary/Dashboard/interfaceWEIGHTPLAN.dart';
+import 'package:my_net_diary/drawer/drawer_list/My%20PLANS/weight_calories.dart';
+import 'package:my_net_diary/drawer/drawer_list/analysis.dart';
+import 'package:my_net_diary/drawer/drawer_list/weight.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({super.key});
@@ -57,7 +61,12 @@ class _MyLoginState extends State<MyLogin> {
               Padding(
                 padding: const EdgeInsets.only(left: 250),
                 child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MyAnalysis()));
+                    },
                     child: Text(
                       'Daily Analysis',
                       style: TextStyle(color: Colors.brown),
@@ -92,7 +101,12 @@ class _MyLoginState extends State<MyLogin> {
                   Padding(
                     padding: const EdgeInsets.only(left: 150),
                     child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MyWeight()));
+                        },
                         child: Text(
                           'Weight Details',
                           style: TextStyle(color: Colors.brown),
@@ -146,7 +160,11 @@ class _MyLoginState extends State<MyLogin> {
               ),
               GestureDetector(
                 onTap: () {
-                  print('Image is clicked');
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MYWEIGHTINTERFACE(),
+                      ));
                 },
                 child: Image.asset(
                   'assets/images/weightloss.png',

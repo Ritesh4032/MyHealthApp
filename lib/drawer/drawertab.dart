@@ -18,7 +18,7 @@ import 'package:my_net_diary/drawer/drawer_list/water.dart';
 import 'package:my_net_diary/drawer/drawer_list/weight.dart';
 import 'package:my_net_diary/drawer/my_drawer_header.dart';
 
-import 'drawer_list/MyPlans.dart';
+import 'drawer_list/My PLANS/MyPlans.dart';
 
 class DrawerTab extends StatelessWidget {
   DrawerTab({super.key});
