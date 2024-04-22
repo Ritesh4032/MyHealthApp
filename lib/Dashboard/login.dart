@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_net_diary/Dashboard/interfaceWEIGHTPLAN.dart';
-import 'package:my_net_diary/drawer/drawer_list/My%20PLANS/weight_calories.dart';
+
 import 'package:my_net_diary/drawer/drawer_list/analysis.dart';
 import 'package:my_net_diary/drawer/drawer_list/weight.dart';
 

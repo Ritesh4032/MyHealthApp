@@ -12,11 +12,11 @@ class _MyAdviceState extends State<MyAdvice> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color.fromARGB(255, 114, 174, 222),
       drawer: DrawerTab(),
       appBar: AppBar(
         title: Text('My Advice History'),
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.blue,
       ),
       body: Container(
         child: Column(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:my_net_diary/drawer/drawer_list/My%20PLANS/weight_calories.dart';
-import 'package:my_net_diary/drawer/drawer_list/PremiumDiets.dart';
+
 import 'package:my_net_diary/drawer/drawertab.dart';
 
 class MyPlans extends StatefulWidget {

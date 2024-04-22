@@ -12,9 +12,9 @@ class _MYIntermittentState extends State<MYIntermittent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.blue,
       appBar: AppBar(
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.lightBlueAccent,
         title: Text(
           'Intermittent Fasting',
           style: TextStyle(
@@ -56,7 +56,7 @@ class _MYIntermittentState extends State<MYIntermittent> {
                 height: MediaQuery.of(context).size.height * 0.2,
                 width: MediaQuery.of(context).size.width * 1,
                 decoration: BoxDecoration(
-                    color: Colors.black,
+                    color: Colors.lightBlueAccent,
                     borderRadius: BorderRadius.circular(25),
                     border: Border.all(
                       color: Colors.white,
@@ -84,7 +84,7 @@ class _MYIntermittentState extends State<MYIntermittent> {
               padding: const EdgeInsets.only(left: 120),
               child: ElevatedButton(
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.blue),
+                    backgroundColor: MaterialStateProperty.all(Colors.green),
                   ),
                   onPressed: () {},
                   child: Text(
