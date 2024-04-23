@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:my_net_diary/bottomnavigation/coach.dart';
 import 'package:my_net_diary/bottomnavigation/community.dart';
-import 'package:my_net_diary/bottomnavigation/me.dart';
+import 'package:my_net_diary/bottomnavigation/ADMIN-ME/me.dart';
 import 'package:my_net_diary/drawer/drawertab.dart';
 import 'package:my_net_diary/Dashboard/interface.dart';
 

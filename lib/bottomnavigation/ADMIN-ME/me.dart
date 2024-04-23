@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:my_net_diary/bottomnavigation/ADMIN-ME/personalinfo.dart';
+import 'package:my_net_diary/drawer/drawer_list/MyHealth.dart';
 
 class MyMe extends StatefulWidget {
   const MyMe({super.key});
@@ -40,7 +42,7 @@ class _MYcoachState extends State<MyMe> {
                     child: Column(
                       children: [
                         Text(
-                          'View all Premium Features      ',
+                          'View all Premium Features       ',
                           style: TextStyle(fontSize: 15, color: Colors.white),
                         ),
                         Text(
@@ -54,7 +56,7 @@ class _MYcoachState extends State<MyMe> {
           ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 10),
-            height: 140,
+            height: 150,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: Colors.blue,
@@ -78,13 +80,16 @@ class _MYcoachState extends State<MyMe> {
                         onPressed: () {},
                         child: Column(
                           children: [
-                            Text(
-                              'My Diet : Calorie Counting',
-                              style:
-                                  TextStyle(fontSize: 15, color: Colors.white),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 100),
+                              child: Text(
+                                'Create Account',
+                                style: TextStyle(
+                                    fontSize: 15, color: Colors.white),
+                              ),
                             ),
                             Text(
-                              'Review,update,or switch your diet',
+                              'Dont lose the progress you have made so far.\nCreate account for backup and online access',
                               style:
                                   TextStyle(fontSize: 10, color: Colors.white),
                             ),
@@ -113,13 +118,16 @@ class _MYcoachState extends State<MyMe> {
                         onPressed: () {},
                         child: Column(
                           children: [
-                            Text(
-                              'My Diet : Calorie Counting',
-                              style:
-                                  TextStyle(fontSize: 15, color: Colors.white),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 170.0),
+                              child: Text(
+                                'Sign In',
+                                style: TextStyle(
+                                    fontSize: 15, color: Colors.white),
+                              ),
                             ),
                             Text(
-                              'Review,update,or switch your diet',
+                              'Sign in to another,already existing MyHealthApp\nAccount',
                               style:
                                   TextStyle(fontSize: 10, color: Colors.white),
                             ),
@@ -153,13 +161,26 @@ class _MYcoachState extends State<MyMe> {
                       width: 25,
                     ),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MyHealth()));
+                        },
                         child: Column(
                           children: [
-                            Text('My Diet : Calorie Counting'),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 145),
+                              child: Text(
+                                'My Health',
+                                style: TextStyle(
+                                    fontSize: 15, color: Colors.white),
+                              ),
+                            ),
                             Text(
-                              'Review,update,or switch your diet',
-                              style: TextStyle(fontSize: 10),
+                              'Body measurement,health and custom trackers',
+                              style:
+                                  TextStyle(fontSize: 10, color: Colors.white),
                             ),
                           ],
                         ))
@@ -183,13 +204,27 @@ class _MYcoachState extends State<MyMe> {
                       width: 20,
                     ),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PersonalInfo(),
+                              ));
+                        },
                         child: Column(
                           children: [
-                            Text('My Diet : Calorie Counting'),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 75),
+                              child: Text(
+                                'Personal info',
+                                style: TextStyle(
+                                    fontSize: 15, color: Colors.white),
+                              ),
+                            ),
                             Text(
-                              'Review,update,or switch your diet',
-                              style: TextStyle(fontSize: 10),
+                              'Date of birth,activity level ,and more',
+                              style:
+                                  TextStyle(fontSize: 10, color: Colors.white),
                             ),
                           ],
                         ))
@@ -213,14 +248,9 @@ class _MYcoachState extends State<MyMe> {
                     ),
                     TextButton(
                         onPressed: () {},
-                        child: Column(
-                          children: [
-                            Text('My Diet : Calorie Counting'),
-                            Text(
-                              'Review,update,or switch your diet',
-                              style: TextStyle(fontSize: 10),
-                            ),
-                          ],
+                        child: Text(
+                          'Progress Photos',
+                          style: TextStyle(fontSize: 15, color: Colors.white),
                         ))
                   ],
                 ),
@@ -229,7 +259,7 @@ class _MYcoachState extends State<MyMe> {
           ),
           Container(
             margin: EdgeInsets.only(top: 7, left: 10, right: 10),
-            height: 140,
+            height: 285,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: Colors.blue,
@@ -251,15 +281,10 @@ class _MYcoachState extends State<MyMe> {
                     ),
                     TextButton(
                         onPressed: () {},
-                        child: Column(
-                          children: [
-                            Text('My Diet : Calorie Counting'),
-                            Text(
-                              'Review,update,or switch your diet',
-                              style: TextStyle(fontSize: 10),
-                            ),
-                          ],
-                        ))
+                        child: Text(
+                          'Manage My Foods',
+                          style: TextStyle(fontSize: 15, color: Colors.white),
+                        )),
                   ],
                 ),
                 SizedBox(
@@ -283,15 +308,90 @@ class _MYcoachState extends State<MyMe> {
                         onPressed: () {},
                         child: Column(
                           children: [
-                            Text('My Diet : Calorie Counting'),
+                            Text('Premium Recipes & Meals',
+                                style: TextStyle(
+                                    fontSize: 15, color: Colors.white)),
                             Text(
-                              'Review,update,or switch your diet',
-                              style: TextStyle(fontSize: 10),
+                              'Crafted byRegisterd Dietitians                ',
+                              style:
+                                  TextStyle(fontSize: 10, color: Colors.white),
                             ),
                           ],
                         ))
                   ],
                 ),
+                SizedBox(height: 20),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20, top: 10),
+                      child: Image.asset(
+                        'assets/images/apple.png',
+                        height: 40,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 25,
+                    ),
+                    TextButton(
+                        onPressed: () {},
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(right: 57),
+                              child: Text(
+                                'Recipe Import',
+                                style: TextStyle(
+                                    fontSize: 15, color: Colors.white),
+                              ),
+                            ),
+                            Text(
+                              'Automatically import web recipes',
+                              style:
+                                  TextStyle(fontSize: 10, color: Colors.white),
+                            ),
+                          ],
+                        )),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20, top: 10),
+                      child: Image.asset(
+                        'assets/images/apple.png',
+                        height: 40,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 25,
+                    ),
+                    TextButton(
+                        onPressed: () {},
+                        child: Column(
+                          children: [
+                            Text(
+                              'Recipe Database        ',
+                              style:
+                                  TextStyle(fontSize: 15, color: Colors.white),
+                            ),
+                            Text(
+                              'Search for over 370,000 recipes',
+                              style:
+                                  TextStyle(fontSize: 10, color: Colors.white),
+                            ),
+                          ],
+                        )),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
               ],
             ),
           ),
@@ -319,10 +419,16 @@ class _MYcoachState extends State<MyMe> {
                     onPressed: () {},
                     child: Column(
                       children: [
-                        Text('View all Premium Features'),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 75),
+                          child: Text(
+                            'Shopping list',
+                            style: TextStyle(fontSize: 15, color: Colors.white),
+                          ),
+                        ),
                         Text(
-                          'You can acheive your goal faster and Smarter',
-                          style: TextStyle(fontSize: 10),
+                          'Simplify your supermarket shopping',
+                          style: TextStyle(fontSize: 10, color: Colors.white),
                         )
                       ],
                     ))
@@ -330,7 +436,7 @@ class _MYcoachState extends State<MyMe> {
             ),
           ),
           Container(
-            height: 70,
+            height: 90,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: Colors.blue,
@@ -352,10 +458,16 @@ class _MYcoachState extends State<MyMe> {
                     onPressed: () {},
                     child: Column(
                       children: [
-                        Text('View all Premium Features'),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 100),
+                          child: Text(
+                            'Apps & Devies',
+                            style: TextStyle(fontSize: 15, color: Colors.white),
+                          ),
+                        ),
                         Text(
-                          'You can acheive your goal faster and Smarter',
-                          style: TextStyle(fontSize: 10),
+                          'Link with fitness trackers,apps,and devices-\nFitbit,Garmin,Withing,Samsung Health and\nGoogle Fit',
+                          style: TextStyle(fontSize: 10, color: Colors.white),
                         )
                       ],
                     ))
@@ -364,7 +476,7 @@ class _MYcoachState extends State<MyMe> {
           ),
           Container(
             margin: EdgeInsets.all(7),
-            height: 70,
+            height: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: Colors.blue,
@@ -384,14 +496,9 @@ class _MYcoachState extends State<MyMe> {
                 ),
                 TextButton(
                     onPressed: () {},
-                    child: Column(
-                      children: [
-                        Text('View all Premium Features'),
-                        Text(
-                          'You can acheive your goal faster and Smarter',
-                          style: TextStyle(fontSize: 10),
-                        )
-                      ],
+                    child: Text(
+                      'App setting',
+                      style: TextStyle(fontSize: 15, color: Colors.white),
                     ))
               ],
             ),
@@ -420,10 +527,16 @@ class _MYcoachState extends State<MyMe> {
                     onPressed: () {},
                     child: Column(
                       children: [
-                        Text('View all Premium Features'),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 86),
+                          child: Text(
+                            'Professional Connect',
+                            style: TextStyle(fontSize: 15, color: Colors.white),
+                          ),
+                        ),
                         Text(
-                          'You can acheive your goal faster and Smarter',
-                          style: TextStyle(fontSize: 10),
+                          'Connecting clients and professional, a free service',
+                          style: TextStyle(fontSize: 10, color: Colors.white),
                         )
                       ],
                     ))
@@ -432,7 +545,7 @@ class _MYcoachState extends State<MyMe> {
           ),
           Container(
             margin: EdgeInsets.all(4),
-            height: 70,
+            height: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: Colors.blue,
@@ -454,11 +567,10 @@ class _MYcoachState extends State<MyMe> {
                     onPressed: () {},
                     child: Column(
                       children: [
-                        Text('View all Premium Features'),
                         Text(
-                          'You can acheive your goal faster and Smarter',
-                          style: TextStyle(fontSize: 10),
-                        )
+                          'Support & FAQs',
+                          style: TextStyle(fontSize: 15, color: Colors.white),
+                        ),
                       ],
                     ))
               ],
