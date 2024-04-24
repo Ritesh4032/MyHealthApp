@@ -117,7 +117,50 @@ class _PersonalInfoState extends State<PersonalInfo> {
                         color: const Color.fromARGB(255, 120, 237, 124)))
               ],
             ),
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 18),
+            child: Row(
+              children: [
+                Text('BMR Calories Formula',
+                    style: TextStyle(color: Colors.white, fontSize: 16)),
+                SizedBox(width: 150),
+                Text('1,627',
+                    style: TextStyle(
+                        color: const Color.fromARGB(255, 120, 237, 124)))
+              ],
+            ),
+          ),
+          Text(
+              'Daily calories your body burns at rest to maintain normal\nboduy functions."rock bottom" Food Calories for weight\nplanning',
+              style: TextStyle(
+                color: Color.fromARGB(255, 213, 202, 202),
+              )),
+          SizedBox(height: 16),
+          Padding(
+            padding: const EdgeInsets.only(left: 18),
+            child: Row(
+              children: [
+                Text('Body Mass index-BMI',
+                    style: TextStyle(color: Colors.white, fontSize: 16)),
+                SizedBox(width: 157),
+                Text('20.4',
+                    style: TextStyle(
+                        color: const Color.fromARGB(255, 120, 237, 124)))
+              ],
+            ),
+          ),
+          Text(
+              'Daily calories your body burns at rest to maintain normal\nboduy functions."rock bottom" Food Calories for weight\nplanning',
+              style: TextStyle(
+                color: Color.fromARGB(255, 213, 202, 202),
+              )),
+          SizedBox(height: 16),
+          Text(
+              'Daily calories your body burns at rest to maintain normal\nboduy functions."rock bottom" Food Calories for weight\nplanning',
+              style: TextStyle(
+                color: Color.fromARGB(255, 213, 202, 202),
+              )),
         ],
       ),
     );

@@ -2,7 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:my_net_diary/bottomnavigation/ADMIN-ME/personalinfo.dart';
+import 'package:my_net_diary/drawer/drawer_list/MyAdvice.dart';
 import 'package:my_net_diary/drawer/drawer_list/MyHealth.dart';
+import 'package:my_net_diary/drawer/drawer_list/PremiumRecipes.dart';
+import 'package:my_net_diary/drawer/drawer_list/RecipeDatabase.dart';
+import 'package:my_net_diary/drawer/drawer_list/ShoppingList.dart';
+import 'package:my_net_diary/drawer/drawer_list/settings.dart';
 
 class MyMe extends StatefulWidget {
   const MyMe({super.key});
@@ -280,7 +285,13 @@ class _MYcoachState extends State<MyMe> {
                       width: 25,
                     ),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => MyAdvice(),
+                              ));
+                        },
                         child: Text(
                           'Manage My Foods',
                           style: TextStyle(fontSize: 15, color: Colors.white),
@@ -305,7 +316,13 @@ class _MYcoachState extends State<MyMe> {
                       width: 20,
                     ),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => MyPremiumRecipes(),
+                              ));
+                        },
                         child: Column(
                           children: [
                             Text('Premium Recipes & Meals',
@@ -372,7 +389,13 @@ class _MYcoachState extends State<MyMe> {
                       width: 25,
                     ),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => RecipeDatabase(),
+                              ));
+                        },
                         child: Column(
                           children: [
                             Text(
@@ -416,7 +439,13 @@ class _MYcoachState extends State<MyMe> {
                   width: 20,
                 ),
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MyShoppingList(),
+                          ));
+                    },
                     child: Column(
                       children: [
                         Padding(
@@ -495,7 +524,13 @@ class _MYcoachState extends State<MyMe> {
                   width: 20,
                 ),
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MySettings(),
+                          ));
+                    },
                     child: Text(
                       'App setting',
                       style: TextStyle(fontSize: 15, color: Colors.white),

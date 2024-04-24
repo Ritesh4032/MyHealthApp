@@ -15,6 +15,7 @@ import 'package:my_net_diary/drawer/drawer_list/RecipeImport.dart';
 import 'package:my_net_diary/drawer/drawer_list/ShoppingList.dart';
 import 'package:my_net_diary/drawer/drawer_list/analysis.dart';
 import 'package:my_net_diary/drawer/drawer_list/appGuide.dart';
+import 'package:my_net_diary/drawer/drawer_list/settings.dart';
 import 'package:my_net_diary/drawer/drawer_list/water.dart';
 import 'package:my_net_diary/drawer/drawer_list/weight.dart';
 import 'package:my_net_diary/drawer/my_drawer_header.dart';
@@ -47,6 +48,7 @@ class DrawerTab extends StatelessWidget {
     {'title': Text('Daily Notes'), 'icon': Icon(Icons.notes)},
     {'title': Text('Shopping List'), 'icon': Icon(Icons.shopping_cart)},
     {'title': Text('App Guides'), 'icon': Icon(Icons.upcoming_sharp)},
+    {'title': Text('Settings'), 'icon': Icon(Icons.settings)},
   ];
   @override
   Widget build(BuildContext context) {
@@ -175,6 +177,12 @@ class DrawerTab extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => MyAppGuide()));
+                        break;
+                      case 20:
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MySettings()));
                         break;
                     }
                   },
