@@ -18,7 +18,7 @@ class _MyWaterState extends State<MyWater> {
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(90),
           child: AppBar(
-            backgroundColor: Colors.grey,
+            backgroundColor: Colors.lightBlueAccent,
             title: Text('Water'),
             bottom: const TabBar(tabs: [
               Tab(
@@ -35,7 +35,7 @@ class _MyWaterState extends State<MyWater> {
         ),
         body: TabBarView(children: [
           Container(
-            color: Colors.pink,
+            color: Color.fromARGB(255, 59, 111, 154),
             child: Column(
               children: [
                 Row(
@@ -47,7 +47,7 @@ class _MyWaterState extends State<MyWater> {
                           Text(
                             '0',
                             style: TextStyle(
-                              color: Colors.blue,
+                              color: Colors.green,
                               fontSize: 35,
                             ),
                           ),
@@ -61,7 +61,7 @@ class _MyWaterState extends State<MyWater> {
                     ElevatedButton(
                         style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all(Colors.blue)),
+                                MaterialStateProperty.all(Colors.green)),
                         onPressed: () {},
                         child: Text(
                           'Edit Day',
@@ -118,7 +118,7 @@ class _MyWaterState extends State<MyWater> {
                       onPressed: () {},
                       child: Text(
                         'Bottle',
-                        style: TextStyle(color: Colors.blue),
+                        style: TextStyle(color: Colors.green),
                       )),
                 ),
                 Divider(
@@ -156,7 +156,7 @@ class _MyWaterState extends State<MyWater> {
                           onPressed: () {},
                           child: Text(
                             'Settings',
-                            style: TextStyle(color: Colors.blue),
+                            style: TextStyle(color: Colors.green),
                           )),
                     ),
                     Padding(
@@ -165,7 +165,7 @@ class _MyWaterState extends State<MyWater> {
                           onPressed: () {},
                           child: Text(
                             'Bottle',
-                            style: TextStyle(color: Colors.blue),
+                            style: TextStyle(color: Colors.green),
                           )),
                     ),
                   ],

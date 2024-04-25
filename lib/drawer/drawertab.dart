@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_net_diary/Dashboard.dart';
+import 'package:my_net_diary/drawer/drawer_list/AppsDevices.dart';
 import 'package:my_net_diary/drawer/drawer_list/DailyNotes.dart';
 import 'package:my_net_diary/drawer/drawer_list/Excersise.dart';
 import 'package:my_net_diary/drawer/drawer_list/IntermittentFasting.dart';
@@ -49,7 +50,9 @@ class DrawerTab extends StatelessWidget {
     {'title': Text('Shopping List'), 'icon': Icon(Icons.shopping_cart)},
     {'title': Text('App Guides'), 'icon': Icon(Icons.upcoming_sharp)},
     {'title': Text('Settings'), 'icon': Icon(Icons.settings)},
+    {'title': Text('Apps & Devices'), 'icon': Icon(Icons.apps)},
   ];
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -183,6 +186,12 @@ class DrawerTab extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => MySettings()));
+                        break;
+                      case 21:
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MyAppsDevices()));
                         break;
                     }
                   },

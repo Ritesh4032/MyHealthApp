@@ -14,11 +14,12 @@ class _MyWeightState extends State<MyWeight> {
     return Scaffold(
       drawer: DrawerTab(),
       appBar: AppBar(
+        backgroundColor: Colors.lightBlueAccent,
         title: Text("Weight"),
       ),
       body: SingleChildScrollView(
         child: Container(
-          color: Colors.black,
+          color: Color.fromARGB(255, 23, 44, 62),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(

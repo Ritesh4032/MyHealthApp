@@ -14,13 +14,13 @@ class _MyAnalysisState extends State<MyAnalysis> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 23, 44, 62),
       drawer: DrawerTab(),
       appBar: AppBar(
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.lightBlueAccent,
         title: Text('Analysis'),
       ),
       body: Container(
-        color: Colors.black,
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: Column(
@@ -70,7 +70,7 @@ class _MyAnalysisState extends State<MyAnalysis> {
                   onPressed: () {},
                   child: Text(
                     "Calorie Analyst",
-                    style: TextStyle(color: Colors.blue),
+                    style: TextStyle(color: Colors.green),
                   )),
             ),
             Padding(
@@ -103,7 +103,7 @@ class _MyAnalysisState extends State<MyAnalysis> {
                         onPressed: () {},
                         child: Text(
                           "PDF Report",
-                          style: TextStyle(color: Colors.blue),
+                          style: TextStyle(color: Colors.green),
                         )),
                   ),
                   Padding(
@@ -112,7 +112,7 @@ class _MyAnalysisState extends State<MyAnalysis> {
                         onPressed: () {},
                         child: Text(
                           "Weekly Analysis",
-                          style: TextStyle(color: Colors.blue),
+                          style: TextStyle(color: Colors.green),
                         )),
                   ),
                   Padding(
@@ -121,7 +121,7 @@ class _MyAnalysisState extends State<MyAnalysis> {
                         onPressed: () {},
                         child: Text(
                           "Calorie Analyst",
-                          style: TextStyle(color: Colors.blue),
+                          style: TextStyle(color: Colors.green),
                         )),
                   ),
                 ],
