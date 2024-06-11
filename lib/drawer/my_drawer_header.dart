@@ -26,7 +26,7 @@ class _MyDrawerState extends State<MyDrawer> {
                 image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage(
-                      'assets/images/health.jpg',
+                      'assets/images/netdiary2.jpeg',
                     ))),
           )
         ],

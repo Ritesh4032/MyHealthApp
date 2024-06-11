@@ -9,21 +9,35 @@ class MyLogin1 extends StatefulWidget {
 }
 
 class _MyLogin1State extends State<MyLogin1> {
+  TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-  String errorText = '';
+  String emailErrorText = '';
+  String passwordErrorText = '';
 
   @override
   void dispose() {
+    emailController.dispose();
     passwordController.dispose();
     super.dispose();
   }
 
-  void validatePassword() {
+  void validateFields() {
     setState(() {
-      if (passwordController.text.isEmpty) {
-        errorText = 'Password should not be empty';
+      if (emailController.text.isEmpty) {
+        emailErrorText = 'Email should not be empty';
+      } else if (!RegExp(r'^[^@]+@[^@]+\.[^@]+')
+          .hasMatch(emailController.text)) {
+        emailErrorText = 'Enter a valid email address';
       } else {
-        errorText = '';
+        emailErrorText = '';
+      }
+
+      if (passwordController.text.isEmpty) {
+        passwordErrorText = 'Password should not be empty';
+      } else if (passwordController.text.length < 8) {
+        passwordErrorText = 'Password should be at least 8 characters';
+      } else {
+        passwordErrorText = '';
       }
     });
   }
@@ -63,10 +77,15 @@ class _MyLogin1State extends State<MyLogin1> {
                   child: Column(
                     children: [
                       TextField(
+                        controller: emailController,
                         decoration: InputDecoration(
                             fillColor: Colors.grey.shade100,
                             filled: true,
                             hintText: 'Email',
+                            label: Text('Email'),
+                            errorText: emailErrorText.isNotEmpty
+                                ? emailErrorText
+                                : null,
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10))),
                       ),
@@ -75,11 +94,14 @@ class _MyLogin1State extends State<MyLogin1> {
                       ),
                       TextField(
                         controller: passwordController,
-                        onChanged: (_) => validatePassword(),
+                        onChanged: (_) => validateFields(),
                         obscureText: true,
                         decoration: InputDecoration(
+                            label: Text('Password'),
                             hintText: 'Password',
-                            errorText: errorText.isNotEmpty ? errorText : null,
+                            errorText: passwordErrorText.isNotEmpty
+                                ? passwordErrorText
+                                : null,
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10))),
                       ),
@@ -90,7 +112,17 @@ class _MyLogin1State extends State<MyLogin1> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              validateFields();
+                              if (emailErrorText.isEmpty &&
+                                  passwordErrorText.isEmpty) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => BottomNavbar(),
+                                    ));
+                              }
+                            },
                             child: Text(
                               'Sign in',
                               style: TextStyle(
@@ -106,11 +138,15 @@ class _MyLogin1State extends State<MyLogin1> {
                             child: IconButton(
                               color: Colors.white,
                               onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => BottomNavbar(),
-                                    ));
+                                validateFields();
+                                if (emailErrorText.isEmpty &&
+                                    passwordErrorText.isEmpty) {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => BottomNavbar(),
+                                      ));
+                                }
                               },
                               icon: Icon(Icons.arrow_forward),
                             ),
@@ -132,7 +168,6 @@ class _MyLogin1State extends State<MyLogin1> {
                                     horizontal: 10, vertical: 10),
                                 decoration: BoxDecoration(
                                     border: Border.all(),
-                                    // color: Colors.blue,
                                     borderRadius: BorderRadius.circular(10)),
                                 child: Text('Sign UP',
                                     style: TextStyle(

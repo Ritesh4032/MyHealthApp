@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_net_diary/login.dart';
+import 'package:my_net_diary/loginUI.dart';
 
 class MyRegister extends StatefulWidget {
   const MyRegister({super.key});

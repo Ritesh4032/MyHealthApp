@@ -15,15 +15,16 @@ class _MyMealsState extends State<MyMeals> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: DrawerTab(),
-      backgroundColor: Colors.greenAccent,
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.lightBlueAccent,
         title: Text('Meals'),
       ),
       body: Container(
         margin: EdgeInsets.all(10),
         height: 300,
         decoration: BoxDecoration(
-          color: Colors.blue,
+          color: Colors.blueAccent,
           borderRadius: BorderRadius.circular(20),
         ),
         child: Column(
@@ -31,7 +32,7 @@ class _MyMealsState extends State<MyMeals> {
             Row(
               children: [
                 Image.asset(
-                  'assets/images/Morning.png',
+                  'assets/images/sun1.png',
                   height: 60,
                 ),
                 Expanded(
@@ -51,7 +52,7 @@ class _MyMealsState extends State<MyMeals> {
                   ),
                 ),
                 PopupMenuButton(
-                  color: Colors.blue,
+                  color: Colors.green,
                   itemBuilder: (BuildContext context) {
                     return [
                       PopupMenuItem(
@@ -133,7 +134,8 @@ class _MyMealsState extends State<MyMeals> {
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
                   child: Image.asset(
-                    'assets/images/moon.png',
+                    color: Colors.white,
+                    'assets/images/moon1.png',
                     height: 30,
                   ),
                 ),
@@ -187,7 +189,7 @@ class _MyMealsState extends State<MyMeals> {
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
                   child: Image.asset(
-                    'assets/images/apple.png',
+                    'assets/images/snacks1.png',
                     height: 36,
                   ),
                 ),
@@ -243,7 +245,7 @@ class _MyMealsState extends State<MyMeals> {
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
                   child: Image.asset(
-                    'assets/images/pen.png',
+                    'assets/images/complete1.png',
                     height: 30,
                   ),
                 ),
@@ -296,7 +298,7 @@ class _MyMealsState extends State<MyMeals> {
               backgroundColor: Colors.amberAccent,
               label: 'Water'),
         ],
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.green,
         child: const Icon(Icons.add),
       ),
     );

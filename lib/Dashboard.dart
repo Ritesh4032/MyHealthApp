@@ -47,30 +47,30 @@ class _BottomNavbarState extends State<BottomNavbar> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
-              color: Colors.lightBlueAccent,
+              color: Colors.blue,
             ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.sports,
-              color: Colors.lightBlueAccent,
+              color: Colors.blue,
             ),
             label: 'Coach',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.group,
-              color: Colors.lightBlueAccent,
+              color: Colors.blue,
             ),
             label: 'Communities',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.person,
-              color: Colors.lightBlueAccent,
+              Icons.person_4_rounded,
+              color: Colors.blue,
             ),
-            label: 'ME',
+            label: 'Me',
           ),
         ],
         currentIndex: _selectedIndex, // Current index of the selected item
