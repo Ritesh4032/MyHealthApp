@@ -15,7 +15,7 @@ class _MyPremiumDietsState extends State<MyPremiumDiets> {
       backgroundColor: Colors.black,
       drawer: DrawerTab(),
       appBar: AppBar(
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.blueAccent,
         title: Text(
           'Premium Diets',
           style: TextStyle(
@@ -184,7 +184,7 @@ class _MyPremiumDietsState extends State<MyPremiumDiets> {
                           top: 250,
                         ),
                         child: Text(
-                          "TIme Tested and proven \n No Food is off-Limits",
+                          "TIme Tested and proven\nNo Food is off-Limits",
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 18,

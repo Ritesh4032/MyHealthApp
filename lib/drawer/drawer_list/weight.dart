@@ -98,6 +98,7 @@ class _MyWeightState extends State<MyWeight> {
                   ],
                 ),
                 Divider(
+                  color: Colors.green,
                   height: 30,
                   thickness: 10,
                 ),
@@ -381,7 +382,7 @@ class _MyWeightState extends State<MyWeight> {
                   child: Row(
                     children: [
                       Image.asset(
-                        'assets/images/apple.png',
+                        'assets/images/premium1.png',
                         height: 60,
                       ),
                       SizedBox(
@@ -401,7 +402,7 @@ class _MyWeightState extends State<MyWeight> {
                           Padding(
                             padding: const EdgeInsets.only(right: 140),
                             child: Text(
-                              'MyNetDiary Premium Members report losing \n 3 times the weight of free users!',
+                              'MyNetDiary Premium Members report losing\n3 times the weight of free users!',
                               style: TextStyle(
                                 color: Colors.white,
                               ),

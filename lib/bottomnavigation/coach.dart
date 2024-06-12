@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:my_net_diary/constants/thenes.dart';
 import 'package:my_net_diary/drawer/drawer_list/IntermittentFasting.dart';
 import 'package:my_net_diary/drawer/drawer_list/Meals.dart';
 import 'package:my_net_diary/drawer/drawer_list/MyAdvice.dart';
@@ -25,10 +26,10 @@ class _MYcoachState extends State<MYcoach> {
         children: [
           Container(
             margin: EdgeInsets.all(15),
-            height: 70,
+            height: 65,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Colors.blue,
+              color: Colors.blueAccent,
             ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,12 +37,13 @@ class _MYcoachState extends State<MYcoach> {
                 Padding(
                   padding: const EdgeInsets.only(left: 20, top: 10),
                   child: Image.asset(
-                    'assets/images/fire.png',
+                    color: Colors.black,
+                    'assets/images/person.png',
                     height: 40,
                   ),
                 ),
                 SizedBox(
-                  width: 20,
+                  width: 15,
                 ),
                 TextButton(
                     onPressed: () {
@@ -55,11 +57,11 @@ class _MYcoachState extends State<MYcoach> {
                       children: [
                         Text(
                           'My Diet : Calorie Counting',
-                          style: TextStyle(color: Colors.white),
+                          style: AppTheme.kBigTitle,
                         ),
                         Text(
                           'Review,update,or switch your diet',
-                          style: TextStyle(color: Colors.white, fontSize: 10),
+                          style: AppTheme.kHeadingOne,
                         )
                       ],
                     ))
@@ -68,10 +70,10 @@ class _MYcoachState extends State<MYcoach> {
           ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 10),
-            height: 140,
+            height: 160,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Colors.blue,
+              color: Colors.blueAccent,
             ),
             child: Column(
               children: [
@@ -81,8 +83,7 @@ class _MYcoachState extends State<MYcoach> {
                     Padding(
                       padding: const EdgeInsets.only(left: 20, top: 10),
                       child: Image.asset(
-                        color: Colors.green,
-                        'assets/images/fire.png',
+                        'assets/images/Food1.png',
                         height: 40,
                       ),
                     ),
@@ -101,13 +102,10 @@ class _MYcoachState extends State<MYcoach> {
                           children: [
                             Text(
                               'Premium Recipe and Meals',
-                              style: TextStyle(color: Colors.white),
+                              style: AppTheme.kBigTitle,
                             ),
-                            Text(
-                              'Crafted by Registered Dietitians            ',
-                              style:
-                                  TextStyle(fontSize: 10, color: Colors.white),
-                            ),
+                            Text('Crafted by Registered Dietitians',
+                                style: AppTheme.kHeadingOne),
                           ],
                         ))
                   ],
@@ -126,7 +124,6 @@ class _MYcoachState extends State<MYcoach> {
                     Padding(
                       padding: const EdgeInsets.only(left: 20, top: 10),
                       child: Image.asset(
-                        color: Colors.pink,
                         'assets/images/love.png',
                         height: 40,
                       ),
@@ -144,15 +141,9 @@ class _MYcoachState extends State<MYcoach> {
                         },
                         child: Column(
                           children: [
-                            Text(
-                              'Premium Menus                     ',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Text(
-                              'Nutrition meal ideas from our dietitians',
-                              style:
-                                  TextStyle(fontSize: 10, color: Colors.white),
-                            ),
+                            Text('Premium Menus', style: AppTheme.kBigTitle),
+                            Text('Nutrition meal ideas from our dietitians',
+                                style: AppTheme.kHeadingOne),
                           ],
                         ))
                   ],
@@ -170,7 +161,7 @@ class _MYcoachState extends State<MYcoach> {
             height: 70,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Colors.blue,
+              color: Colors.blueAccent,
             ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -178,7 +169,7 @@ class _MYcoachState extends State<MYcoach> {
                 Padding(
                   padding: const EdgeInsets.only(left: 20, top: 10),
                   child: Image.asset(
-                    'assets/images/fire.png',
+                    'assets/images/connect.png',
                     height: 40,
                   ),
                 ),
@@ -195,12 +186,9 @@ class _MYcoachState extends State<MYcoach> {
                     },
                     child: Column(
                       children: [
-                        Text('Intermittent Fasting                          ',
-                            style: TextStyle(color: Colors.white)),
-                        Text(
-                          'Enable fasting timer and configure fasting tools',
-                          style: TextStyle(fontSize: 10, color: Colors.white),
-                        )
+                        Text('Intermittent Fasting', style: AppTheme.kBigTitle),
+                        Text('Enable fasting timer and configure fasting tools',
+                            style: AppTheme.kHeadingOne)
                       ],
                     ))
               ],
@@ -244,7 +232,7 @@ class _MYcoachState extends State<MYcoach> {
             height: 450,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Colors.blue,
+              color: Colors.blueAccent,
             ),
             child: Column(
               children: [
@@ -254,7 +242,7 @@ class _MYcoachState extends State<MYcoach> {
                     Padding(
                       padding: const EdgeInsets.only(left: 20, top: 10),
                       child: Image.asset(
-                        'assets/images/fire.png',
+                        'assets/images/bell.png',
                         height: 40,
                       ),
                     ),
@@ -263,10 +251,8 @@ class _MYcoachState extends State<MYcoach> {
                     ),
                     TextButton(
                         onPressed: () {},
-                        child: Text(
-                          'My Diet Trends',
-                          style: TextStyle(color: Colors.white, fontSize: 16),
-                        ))
+                        child:
+                            Text('My Diet Trends', style: AppTheme.kBigTitle))
                   ],
                 ),
                 Divider(
@@ -280,13 +266,12 @@ class _MYcoachState extends State<MYcoach> {
                     Padding(
                       padding: const EdgeInsets.only(left: 20, top: 10),
                       child: Image.asset(
-                        color: Colors.greenAccent,
-                        'assets/images/love.png',
+                        'assets/images/weights.png',
                         height: 40,
                       ),
                     ),
                     SizedBox(
-                      width: 20,
+                      width: 10,
                     ),
                     TextButton(
                         onPressed: () {
@@ -296,10 +281,8 @@ class _MYcoachState extends State<MYcoach> {
                                 builder: (context) => MyAnalysis(),
                               ));
                         },
-                        child: Text(
-                          'Daily Analysis',
-                          style: TextStyle(color: Colors.white, fontSize: 16),
-                        ))
+                        child:
+                            Text('Daily Analysis', style: AppTheme.kBigTitle))
                   ],
                 ),
                 Divider(
@@ -313,7 +296,7 @@ class _MYcoachState extends State<MYcoach> {
                     Padding(
                       padding: const EdgeInsets.only(left: 20, top: 10),
                       child: Image.asset(
-                        'assets/images/fire.png',
+                        'assets/images/sun1.png',
                         height: 40,
                       ),
                     ),
@@ -322,10 +305,8 @@ class _MYcoachState extends State<MYcoach> {
                     ),
                     TextButton(
                         onPressed: () {},
-                        child: Text(
-                          'Weekly Analysis',
-                          style: TextStyle(color: Colors.white, fontSize: 16),
-                        ))
+                        child:
+                            Text('Weekly Analysis', style: AppTheme.kBigTitle))
                   ],
                 ),
                 Divider(
@@ -358,15 +339,11 @@ class _MYcoachState extends State<MYcoach> {
                         child: Column(
                           children: [
                             Text(
-                              'Nutrient Analysis                                ',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 16),
-                            ),
+                                'Nutrient Analysis                            ',
+                                style: AppTheme.kBigTitle),
                             Text(
-                              'In -depth analysis top meals,foods ,goals,and statistics',
-                              style:
-                                  TextStyle(fontSize: 10, color: Colors.white),
-                            ),
+                                'In -depth analysis top meals,foods ,goals,and statistics',
+                                style: AppTheme.kHeadingOne),
                           ],
                         ))
                   ],
@@ -397,10 +374,8 @@ class _MYcoachState extends State<MYcoach> {
                                 builder: (context) => MyAdvice(),
                               ));
                         },
-                        child: Text(
-                          'My Advice Hisory',
-                          style: TextStyle(color: Colors.white, fontSize: 16),
-                        ))
+                        child:
+                            Text('My Advice Hisory', style: AppTheme.kBigTitle))
                   ],
                 ),
                 Divider(
@@ -426,16 +401,10 @@ class _MYcoachState extends State<MYcoach> {
                         onPressed: () {},
                         child: Column(
                           children: [
-                            Text(
-                              'PDF Reports                         ',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 16),
-                            ),
-                            Text(
-                              'Food,Activity,Measurement and Summary',
-                              style:
-                                  TextStyle(fontSize: 10, color: Colors.white),
-                            ),
+                            Text('PDF Reports                         ',
+                                style: AppTheme.kBigTitle),
+                            Text('Food,Activity,Measurement and Summary',
+                                style: AppTheme.kHeadingOne),
                           ],
                         ))
                   ],
@@ -453,7 +422,7 @@ class _MYcoachState extends State<MYcoach> {
             height: 140,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Colors.blue,
+              color: Colors.blueAccent,
             ),
             child: Column(
               children: [
@@ -478,10 +447,7 @@ class _MYcoachState extends State<MYcoach> {
                                 builder: (context) => MyAppGuide(),
                               ));
                         },
-                        child: Text(
-                          'App Guide',
-                          style: TextStyle(color: Colors.white, fontSize: 16),
-                        ))
+                        child: Text('App Guide', style: AppTheme.kBigTitle))
                   ],
                 ),
                 Divider(
@@ -505,10 +471,7 @@ class _MYcoachState extends State<MYcoach> {
                     ),
                     TextButton(
                         onPressed: () {},
-                        child: Text(
-                          'Diet Library',
-                          style: TextStyle(color: Colors.white, fontSize: 16),
-                        ))
+                        child: Text('Diet Library', style: AppTheme.kBigTitle))
                   ],
                 ),
                 Divider(

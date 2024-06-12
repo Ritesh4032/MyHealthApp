@@ -18,7 +18,7 @@ class _MyPremiumRecipesState extends State<MyPremiumRecipes> {
           preferredSize: Size.fromHeight(100),
           child: AppBar(
             title: Text(
-              "Premium  \n Recipes & Meals",
+              "Premium\nRecipes & Meals",
               style:
                   TextStyle(color: Colors.white, fontStyle: FontStyle.italic),
             ),
@@ -59,7 +59,7 @@ class _MyPremiumRecipesState extends State<MyPremiumRecipes> {
                                 image: DecorationImage(
                                     fit: BoxFit.cover,
                                     image: AssetImage(
-                                        'assets/images/CONTAINER1.jpg'))),
+                                        'assets/images/CONTAINER2.jpg'))),
                             height: MediaQuery.of(context).size.height * 0.3,
                             width: MediaQuery.of(context).size.width * 0.7,
                           ),
@@ -274,7 +274,8 @@ class _MyPremiumRecipesState extends State<MyPremiumRecipes> {
               ),
               Text(
                 'Breakfast',
-                style: TextStyle(color: Colors.white),
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -292,7 +293,7 @@ class _MyPremiumRecipesState extends State<MyPremiumRecipes> {
                                 image: DecorationImage(
                                     fit: BoxFit.cover,
                                     image: AssetImage(
-                                        'assets/images/CONTAINER1.jpg'))),
+                                        'assets/images/CONTAINER3.jpg'))),
                             height: MediaQuery.of(context).size.height * 0.3,
                             width: MediaQuery.of(context).size.width * 0.7,
                           ),
@@ -507,7 +508,8 @@ class _MyPremiumRecipesState extends State<MyPremiumRecipes> {
               ),
               Text(
                 'Lunch',
-                style: TextStyle(color: Colors.white),
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -525,7 +527,7 @@ class _MyPremiumRecipesState extends State<MyPremiumRecipes> {
                                 image: DecorationImage(
                                     fit: BoxFit.cover,
                                     image: AssetImage(
-                                        'assets/images/CONTAINER1.jpg'))),
+                                        'assets/images/CONTAINER4.jpg'))),
                             height: MediaQuery.of(context).size.height * 0.3,
                             width: MediaQuery.of(context).size.width * 0.7,
                           ),

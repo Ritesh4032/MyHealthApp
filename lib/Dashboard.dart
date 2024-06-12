@@ -60,10 +60,10 @@ class _BottomNavbarState extends State<BottomNavbar> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.group,
+              Icons.health_and_safety,
               color: Colors.blue,
             ),
-            label: 'Communities',
+            label: 'Specialist',
           ),
           BottomNavigationBarItem(
             icon: Icon(
